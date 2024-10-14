@@ -6,5 +6,5 @@ with open('test.txt', 'r') as f:
         count += 1
         if count % 2 == 0:
             print(len(data))
-print(len(data))
-print(data[21])
+print('第一筆為', data[0])
+print('總共資料為', len(data), '筆')
