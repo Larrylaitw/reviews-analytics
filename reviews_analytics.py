@@ -4,7 +4,7 @@ a = 0
 with open('test.txt', 'r') as f:
     for line in f:
         a = len(line) + a
-        data.append(line)
+        data.append(line.strip())
         #count += 1  #可以顯示讀取狀態
         #if count % 5 == 0:
             #print(len(data))
@@ -18,3 +18,9 @@ for d in data:
     if len(d) > 3:
         new.append(d)
 print('總共有', len(new), '大於3個字元')
+
+t = []
+for d in data:
+    if '3' in d:
+        t.append(d.strip())
+print(t)
