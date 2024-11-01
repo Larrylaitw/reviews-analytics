@@ -1,3 +1,5 @@
+import time
+
 data = []
 count = 0
 a = 0
@@ -18,6 +20,7 @@ for d in data:
         t.append(d.strip())
 print(t)
 
+start_time = time.time()
 #統計重複的字
 wc = {}
 for d in data:
@@ -30,6 +33,8 @@ for d in data:
 
 for word in wc:
     print(word, ':', wc[word])
+end_time = time.time()
+print('分類用了', end_time - start_time, '秒')
 
 while True:
     word = input('請輸入你要搜尋的字: ')
